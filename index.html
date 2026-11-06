@@ -120,12 +120,13 @@ footer{border-top:1px solid var(--line);padding:26px 0 0;margin-top:60px;font-si
 <div class="mnav"><label class="sr" for="jump" style="position:absolute;left:-999px">Jump to section</label>
 <select id="jump" aria-label="Jump to section">
 <option value="">Jump to section</option>
-<option value="#summary">Summary</option><option value="#circelligence">Circelligence</option><option value="#sap">SAP</option><option value="#connectors">Connectors and APIs</option><option value="#wedge">Wedge assessment</option><option value="#precision">What DI represents</option><option value="#positioning">Positioning</option><option value="#qa">Hilti questions</option><option value="#uncertainties">Uncertainties</option><option value="#sources">Sources</option>
+<option value="#summary">Summary</option><option value="#framework">Circelligence framework</option><option value="#circelligence">Circelligence at Hilti</option><option value="#sap">SAP</option><option value="#connectors">Connectors and APIs</option><option value="#wedge">Wedge assessment</option><option value="#precision">What DI represents</option><option value="#positioning">Positioning</option><option value="#qa">Hilti questions</option><option value="#uncertainties">Uncertainties</option><option value="#sources">Sources</option>
 </select></div>
 <div class="shell">
 <nav class="rail" aria-label="Sections">
 <p class="t">Contents</p>
 <a href="#summary">Summary</a>
+<a href="#framework">Circelligence framework</a>
 <a href="#circelligence">Circelligence at Hilti</a>
 <a href="#sap">SAP capabilities</a>
 <a href="#connectors">Connectors and APIs</a>
@@ -175,6 +176,61 @@ footer{border-top:1px solid var(--line);padding:26px 0 0;margin-top:60px;font-si
 <div class="card"><h3>Generic features are weak differentiators</h3><p>Agents, MCP, orchestration and governance overlap with current or announced SAP capabilities. They help DI operate but do not set it apart.</p></div>
 </div>
 <div class="note blue"><p><strong>How to read the labels.</strong> Evidence classes: <span class="chip E1">E1</span> confirmed deployed at Hilti, <span class="chip E2">E2</span> documented in Circelligence, <span class="chip E3">E3</span> documented in SAP, <span class="chip E4">E4</span> third-party connector, <span class="chip E5">E5</span> possible by custom development, <span class="chip E6">E6</span> inferred, <span class="chip E7">E7</span> unknown. API verification levels: <span class="chip V1">V1</span> SAP Help or Learning read, <span class="chip V2">V2</span> SAP Community or KBA, <span class="chip V3">V3</span> third-party listing or DI HTML only, <span class="chip V4">V4</span> not verified.</p></div>
+</section>
+
+<section id="framework">
+<h2>The Circelligence framework in detail</h2>
+<p>This is the framework as BCG and Circle Economy published it in November 2021 (<a href="https://media-publications.bcg.com/Circular-Metrics-for-Business.pdf">“Introduction to the CIRCelligence indicators framework”, version 1.0</a>, read in full). It is the most detailed public description of the methodology. The current software and Hilti’s deployment came later and may differ <span class="chip E2">E2</span>.</p>
+<div class="cols">
+<div class="card"><h3>Provenance and maturity</h3><p>Launched by BCG in February 2020 with Circle Economy’s help; BCG is co-author. On Circle Economy’s six-level maturity scale it sat at level 2, “tested within a limited set of applications”, in 2021. That rating predates Hilti’s deployment.</p></div>
+<div class="card"><h3>Scores</h3><p>More than 60 indicators. Quantitative scores run 0 to 100%, on a mass basis and a value basis. Qualitative grades run A to F. The pairing separates coincidental from intentional circularity.</p></div>
+<div class="card"><h3>Data effort</h3><p>A web survey of about 50 quantitative questions (up to 2,500 data points) and about 100 qualitative ones. Nearly 100 input materials and up to 10 sales markets. Gaps are filled with sector averages or proxies. Data stays with the company.</p></div>
+<div class="card"><h3>Delivery model</h3><p>First application is always paired with a BCG project. Later use is by self-assessment, described in 2021 as a free online tool. Reduced scopes are possible. BCG also offers cost-benefit assessments to prioritise initiatives.</p></div>
+</div>
+<h3>Structure: five value-cycle steps and two business functions</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Covers</th><th>Sub-indicators</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td>Input</td><td>Resources entering the company</td><td>6</td><td>Quantitative and qualitative</td></tr>
+<tr><td>Product design</td><td>Design and material choices</td><td>4</td><td>Quantitative and qualitative</td></tr>
+<tr><td>Production and sales</td><td>Production resource and material flows</td><td>10</td><td>Quantitative and qualitative</td></tr>
+<tr><td>Business model and usage</td><td>Use phase and lifetime</td><td>6</td><td>Quantitative and qualitative</td></tr>
+<tr><td>End of life</td><td>Treatment and recovery of products</td><td>8</td><td>Quantitative and qualitative</td></tr>
+<tr><td>Business implementation</td><td>Strategy, steering, governance</td><td>12</td><td>Qualitative only</td></tr>
+<tr><td>Collaboration and ecosystems</td><td>Partners across the value chain</td><td>9</td><td>Qualitative only</td></tr>
+</tbody></table></div>
+<p>For each step the framework reads inflow (circular versus linear), slow flow (lengthening versus shortening use), outflow, and qualitative aspects. The headline indicator, percent circularity, is the average of all performance indicators.</p>
+<h3>Three-step approach</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Step</th><th>What it does</th><th>Outputs</th></tr></thead>
+<tbody>
+<tr><td>Create transparency</td><td>Collect quantitative and qualitative data and calculate the baseline across the value cycle</td><td>Scores and grades per step; root causes; advantages and gaps</td></tr>
+<tr><td>Develop an actionable roadmap</td><td>Simulate scenarios and set an ambition level for a time frame; BCG recommends how to reach it</td><td>Ambition level, leverage points, quick wins</td></tr>
+<tr><td>Implement key initiatives</td><td>Set KPIs and track progress; communicate from board level to external reporting</td><td>KPIs, monitoring, stakeholder reporting</td></tr>
+</tbody></table></div>
+<p>The calculator can focus on product, component, packaging, division or company level through “lenses”, and a dashboard shows the whole value chain and each segment.</p>
+<h3>How it evolved in the sources reviewed</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Source</th><th>Date</th><th>What it adds</th></tr></thead>
+<tbody>
+<tr><td>BCG and Circle Economy paper</td><td>Nov 2021</td><td>Survey-based calculator, five steps, 60+ indicators, A to F grades, mass and value scores</td></tr>
+<tr><td>Hilti, BCG and SAP release</td><td>22 Nov 2023</td><td>Web app and SAP BTP deployment; automated database updates; scenario assessments described as groundwork</td></tr>
+<tr><td>BCG product page</td><td>Undated</td><td>Five pillars: quantitative (SAP data or Excel), qualitative survey, dashboard, scenario player, customisation</td></tr>
+</tbody></table></div>
+<h3>Where the framework stops and DI begins</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Framework solution</th><th>Level</th><th>DI in the HTML</th></tr></thead>
+<tbody>
+<tr><td>Circularity baseline, mass and value</td><td>Company, value chain</td><td>No equivalent. Sustainability view reports CO2e by route</td></tr>
+<tr><td>Qualitative readiness grades A to F</td><td>Organisation</td><td>No equivalent</td></tr>
+<tr><td>Lenses by product, component, division</td><td>Portfolio</td><td>Item-level asset and component intelligence, a different purpose</td></tr>
+<tr><td>Scenario simulation, ambition setting</td><td>Strategy</td><td>What-if on a single case only</td></tr>
+<tr><td>KPIs and progress reporting</td><td>Company</td><td>Route mix, Predicted vs actual, Overrides at decision level</td></tr>
+<tr><td>Cost-benefit prioritisation of initiatives</td><td>Initiatives</td><td>Per-case route economics</td></tr>
+<tr><td>Approval, handoff and execution of an item-level decision</td><td>Outside the framework</td><td>Approvals inbox, handoff, reconciliation (proposed)</td></tr>
+</tbody></table></div>
+<div class="note blue"><p>This is a statement of scope. DI’s HTML does not represent a circularity baseline, a readiness assessment, benchmark scores or a strategic roadmap. Neither product is shown to be better than the other; they work at different levels. A third-party write-up claiming DI is “stronger” than Circelligence in execution was checked: its facts about the framework match the primary paper, but the comparative claim is not supported by evidence here.</p></div>
+<p style="font-size:14px;color:var(--muted)">Indicator counts, grades, data effort and delivery model are from the 2021 paper and may have changed in later versions.</p>
 </section>
 
 <section id="circelligence">
@@ -361,6 +417,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 0;margin-top:60px;font-si
 <h2>Sources</h2>
 <p>Read in full on or before 5 November 2026 unless noted.</p>
 <ul>
+<li><a href="https://media-publications.bcg.com/Circular-Metrics-for-Business.pdf">BCG and Circle Economy: Introduction to the CIRCelligence indicators framework</a>, Nov 2021</li>
 <li><a href="https://www.bcg.com/x/product-library/circular-economy-circelligence">BCG: Circelligence product page</a></li>
 <li><a href="https://news.sap.com/2023/11/hilti-group-measures-circularity-sap-btp/">SAP News Center: Hilti Group measures circularity with SAP BTP</a>, 22 Nov 2023</li>
 <li><a href="https://www.hilti.group/content/hilti/CP/XX/en/company/media-relations/media-releases/bcg_sap_circularity_standards_circelligence.html">Hilti Group media release</a>, 22 Nov 2023</li>
