@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DI × BCG Circelligence + SAP: competitive analysis for Hilti Aftermarket Service</title>
+<meta name="description" content="Competitive product analysis of DI against BCG Circelligence and the SAP ecosystem for Hilti Aftermarket Service (AMS). Research cut-off 5 November 2026.">
+<meta name="robots" content="noindex">
+<style>
+:root{
+  --bg:#f6f8fa; --panel:#ffffff; --ink:#18222d; --muted:#566272; --line:#d5dce4;
+  --brand:#0e4a5a; --brand-soft:#e3eef1; --amber:#8a5a0a; --amber-soft:#fbf1da;
+  --green:#2a6f46; --green-soft:#e4f1e9; --red:#a33327; --red-soft:#f8e6e3; --blue:#254e8f; --blue-soft:#e6edf8;
+  --serif:Charter,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#10171e; --panel:#17212b; --ink:#e7edf3; --muted:#9aa8b6; --line:#2b3947;
+  --brand:#7cc3d4; --brand-soft:#16323b; --amber:#e3b45e; --amber-soft:#2e2511; --green:#7fcf9f; --green-soft:#16301f;
+  --red:#ef8f84; --red-soft:#34191a; --blue:#8fb2ec; --blue-soft:#18263d;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-underline-offset:2px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:8px 14px;z-index:20}
+.skip:focus{left:8px;top:8px}
+.shell{display:grid;grid-template-columns:230px minmax(0,1fr);max-width:1240px;margin:0 auto}
+nav.rail{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:28px 18px 28px 24px;border-right:1px solid var(--line)}
+nav.rail .t{font:600 13px/1.3 var(--sans);color:var(--muted);margin:0 0 14px}
+nav.rail a{display:block;color:var(--ink);text-decoration:none;padding:6px 10px;border-left:2px solid transparent;font-size:14px;line-height:1.35}
+nav.rail a:hover{background:var(--brand-soft)}
+nav.rail a.on{border-left-color:var(--brand);background:var(--brand-soft);font-weight:600}
+main{padding:44px 40px 80px;min-width:0}
+header.hero{padding-bottom:30px;border-bottom:1px solid var(--line);margin-bottom:34px}
+h1{font:700 clamp(30px,4.2vw,46px)/1.12 var(--serif);letter-spacing:-.01em;margin:0 0 14px;max-width:30ch}
+.sub{font:400 19px/1.5 var(--serif);color:var(--muted);max-width:60ch;margin:0 0 22px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--muted);margin:0 0 6px}
+h2{font:700 28px/1.2 var(--serif);margin:56px 0 14px}
+h3{font:700 18px/1.3 var(--sans);margin:30px 0 8px}
+p{margin:0 0 14px;max-width:72ch}
+section{scroll-margin-top:20px}
+.verdict{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:6px;padding:20px 24px;margin:22px 0}
+.verdict p{margin:0 0 10px;max-width:none}
+.verdict p:last-child{margin:0}
+.verdict strong.k{font:700 20px/1.35 var(--serif);display:block;margin-bottom:8px}
+.note{border-radius:6px;padding:14px 18px;margin:18px 0;font-size:15px;max-width:78ch}
+.note.amber{background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
+.note.blue{background:var(--blue-soft);border:1px solid color-mix(in srgb,var(--blue) 35%,transparent)}
+.note.green{background:var(--green-soft);border:1px solid color-mix(in srgb,var(--green) 35%,transparent)}
+.note p{margin:0}
+.map{display:grid;grid-template-columns:minmax(180px,1.6fr) repeat(3,minmax(96px,1fr));gap:6px;margin:18px 0 8px;font-size:13.5px;overflow-x:auto}
+.map>div{padding:9px 10px;border-radius:5px;border:1px solid var(--line);background:var(--panel);display:flex;align-items:center}
+.map .h{font-weight:700;background:var(--brand);color:#fff;border-color:var(--brand);justify-content:center;text-align:center}
+.map .r{background:transparent;border:none;padding-left:0;font-weight:500}
+.map .doc{background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 45%,transparent);justify-content:center;text-align:center}
+.map .gen{background:var(--green-soft);border-style:dashed;border-color:color-mix(in srgb,var(--green) 55%,transparent);justify-content:center;text-align:center}
+.map .none{color:var(--muted);justify-content:center;text-align:center;background:transparent}
+.map .ni{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 50%,transparent);justify-content:center;text-align:center;font-weight:600}
+.map .prop{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 50%,transparent);justify-content:center;text-align:center}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);margin-bottom:6px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px;border:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.card h3{margin:0 0 6px;font-size:16px}
+.card p{font-size:15px;margin:0 0 8px}
+.card ul{margin:6px 0 0;padding-left:18px;font-size:14.5px}
+.tag{display:inline-block;font:600 12px/1 var(--sans);padding:4px 8px;border-radius:999px;margin-bottom:8px}
+.tag.cond{background:var(--amber-soft);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 45%,transparent)}
+.tag.weak{background:var(--red-soft);color:var(--red);border:1px solid color-mix(in srgb,var(--red) 40%,transparent)}
+.tablewrap{overflow-x:auto;margin:14px 0 20px;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--brand);color:#fff;font-weight:600;position:sticky;top:0}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--bg) 60%,var(--panel))}
+.chip{display:inline-block;font:700 11.5px/1 var(--sans);padding:3px 6px;border-radius:4px;color:#fff;margin-right:2px;white-space:nowrap}
+.E1,.V1,.ga{background:#2a6f46}.E2,.V2{background:#0e5f72}.E3{background:#254e8f}.E4{background:#7a3f98}.E5,.V3,.ann{background:#8a5a0a}.E6{background:#667380}.E7,.V4,.blk{background:#a33327}.beta{background:#7a3f98}.avl{background:#0e5f72}
+details{background:var(--panel);border:1px solid var(--line);border-radius:6px;margin:10px 0}
+summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;display:flex;gap:12px;align-items:flex-start}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";flex:none;width:20px;height:20px;border-radius:4px;background:var(--brand-soft);color:var(--brand);text-align:center;line-height:20px;font-weight:700}
+details[open]>summary::before{content:"\2212"}
+details .body{padding:0 18px 16px 50px;font-size:15px}
+details .body dl{margin:0}
+details .body dt{font-weight:700;color:var(--muted);font-size:13px;margin-top:10px}
+details .body dd{margin:2px 0 0;max-width:72ch}
+.quick{display:block;font-weight:400;color:var(--muted);font-size:14.5px;margin-top:4px}
+.qn{font-variant-numeric:tabular-nums;color:var(--muted);margin-right:4px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 14px}
+button{font:600 14px var(--sans);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:7px 12px;cursor:pointer}
+button:hover{background:var(--brand-soft)}
+dl.kv{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:0;border:1px solid var(--line);border-radius:6px;background:var(--panel);margin:14px 0}
+dl.kv dt,dl.kv dd{margin:0;padding:10px 14px;border-bottom:1px solid var(--line)}
+dl.kv dt{font-weight:600;background:color-mix(in srgb,var(--bg) 70%,var(--panel))}
+dl.kv dt:last-of-type,dl.kv dd:last-of-type{border-bottom:none}
+footer{border-top:1px solid var(--line);padding:26px 0 0;margin-top:60px;font-size:14px;color:var(--muted);max-width:78ch}
+.mnav{display:none}
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.rail{display:none}
+  .mnav{display:block;position:sticky;top:0;z-index:10;background:var(--panel);border-bottom:1px solid var(--line);padding:8px 14px}
+  .mnav select{width:100%;font:15px var(--sans);padding:8px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:5px}
+  main{padding:28px 18px 60px}
+  dl.kv{grid-template-columns:1fr}
+  dl.kv dt{border-bottom:none;padding-bottom:2px}
+  .map{grid-template-columns:minmax(150px,1.4fr) repeat(3,minmax(84px,1fr));font-size:12.5px}
+}
+@media print{
+  nav.rail,.mnav,.toolbar{display:none}.shell{display:block}main{padding:0}
+  details{break-inside:avoid}details>.body{display:block}
+  body{background:#fff;color:#000}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="mnav"><label class="sr" for="jump" style="position:absolute;left:-999px">Jump to section</label>
+<select id="jump" aria-label="Jump to section">
+<option value="">Jump to section</option>
+<option value="#summary">Summary</option><option value="#circelligence">Circelligence</option><option value="#sap">SAP</option><option value="#connectors">Connectors and APIs</option><option value="#wedge">Wedge assessment</option><option value="#precision">What DI represents</option><option value="#positioning">Positioning</option><option value="#qa">Hilti questions</option><option value="#uncertainties">Uncertainties</option><option value="#sources">Sources</option>
+</select></div>
+<div class="shell">
+<nav class="rail" aria-label="Sections">
+<p class="t">Contents</p>
+<a href="#summary">Summary</a>
+<a href="#circelligence">Circelligence at Hilti</a>
+<a href="#sap">SAP capabilities</a>
+<a href="#connectors">Connectors and APIs</a>
+<a href="#wedge">Wedge assessment</a>
+<a href="#precision">What DI represents</a>
+<a href="#positioning">Positioning and moat</a>
+<a href="#qa">Hilti questions</a>
+<a href="#uncertainties">Uncertainties</a>
+<a href="#sources">Sources</a>
+</nav>
+<main id="main">
+<header class="hero">
+<h1>DI × BCG Circelligence + SAP</h1>
+<p class="sub">A competitive product analysis for Hilti Aftermarket Service (AMS): where a proposed decision layer called DI could sit alongside the tools Hilti already uses.</p>
+<div class="meta"><span>Research cut-off 5 November 2026</span><span>Audience: AMS leadership, service and repair operations, spare parts, circularity, digital and technology</span></div>
+<div class="verdict">
+<strong class="k">No DI wedge is proven. The strongest candidate is conditional.</strong>
+<p>Recovered-component-to-demand matching is the strongest conditional wedge, inside a broader proposition of case-level aftermarket decision intelligence. Reconciling each decision to its actual outcome is how DI could show whether it worked.</p>
+<p>This is a publicly identifiable product gap, and a possible build-versus-buy case. It is not a claim that SAP, BCG or Hilti cannot build the same thing, and Hilti may already have equivalent logic that public sources do not show.</p>
+</div>
+</header>
+
+<section id="summary">
+<h2>Summary</h2>
+<p>AMS means <strong>Hilti Aftermarket Service</strong>: repair and maintenance, spare parts, service-centre operations, returned-tool assessment, refurbishment, component recovery and reuse, and end-of-life disposition. Hilti already runs these. DI is assessed only as a possible decision layer on top of them.</p>
+<h3>Who documents what</h3>
+<div class="map" role="table" aria-label="Capability map">
+<div class="h" role="columnheader" style="background:transparent;border:none"></div><div class="h" role="columnheader">Circelligence</div><div class="h" role="columnheader">SAP</div><div class="h" role="columnheader">DI (proposed)</div>
+<div class="r">Circularity scoring and material flows</div><div class="doc">Documented</div><div class="none">Not a focus</div><div class="none">Not claimed</div>
+<div class="r">Scenario modelling, initiative business cases</div><div class="doc">Documented</div><div class="none">Not a focus</div><div class="prop">Case-level what-if</div>
+<div class="r">Repair application: quotation, order, confirmation</div><div class="none">Not a focus</div><div class="doc">Documented</div><div class="none">Not claimed</div>
+<div class="r">Workflow, rules, human approval</div><div class="none">Not a focus</div><div class="gen">Documented, generic</div><div class="prop">Proposed</div>
+<div class="r">Agents, MCP, governance</div><div class="none">Not a focus</div><div class="gen">Documented, generic</div><div class="prop">Proposed</div>
+<div class="r">Integration, APIs, writeback</div><div class="none">Not a focus</div><div class="gen">Documented, generic</div><div class="prop">Proposed</div>
+<div class="r">Case-level route ranking and gates</div><div class="none">Not a focus</div><div class="ni">Not identified</div><div class="prop">Proposed</div>
+<div class="r">Recovered-part-to-demand matching</div><div class="none">Not a focus</div><div class="ni">Not identified</div><div class="prop">Proposed</div>
+<div class="r">Outcome reconciliation and learning</div><div class="none">Not a focus</div><div class="ni">Not identified</div><div class="prop">Proposed</div>
+</div>
+<div class="legend"><span><i style="background:var(--green-soft)"></i>Documented in official or vendor sources</span><span><i style="background:var(--amber-soft)"></i>Not identified as a standard capability in the sources reviewed</span><span><i style="background:var(--blue-soft)"></i>Proposed in the DI HTML, not validated</span></div>
+<p style="font-size:14px;color:var(--muted)">“Not identified” means absent from the pages reviewed. It is not proof of absence.</p>
+
+<h3>Key findings</h3>
+<div class="cols">
+<div class="card"><h3>Circelligence measures</h3><p>A strategic circularity tool: scores, material database, dashboards, scenario player. Hilti confirms a portfolio score and database. Scenario use at Hilti is not confirmed.</p></div>
+<div class="card"><h3>Hilti already operates the activities</h3><p>Repair centres, automated criteria-guided part extraction with individual part testing, pool and donation routes for returned Fleet tools, recycling partners. These results are Hilti’s, not DI’s.</p></div>
+<div class="card"><h3>SAP is more than a system of record</h3><p>It has a repair application (S/4HANA In-House Service), rules, workflow, agents, an AI platform and integration tooling. It documents the building blocks for every DI function except the domain content.</p></div>
+<div class="card"><h3>Generic features are weak differentiators</h3><p>Agents, MCP, orchestration and governance overlap with current or announced SAP capabilities. They help DI operate but do not set it apart.</p></div>
+</div>
+<div class="note blue"><p><strong>How to read the labels.</strong> Evidence classes: <span class="chip E1">E1</span> confirmed deployed at Hilti, <span class="chip E2">E2</span> documented in Circelligence, <span class="chip E3">E3</span> documented in SAP, <span class="chip E4">E4</span> third-party connector, <span class="chip E5">E5</span> possible by custom development, <span class="chip E6">E6</span> inferred, <span class="chip E7">E7</span> unknown. API verification levels: <span class="chip V1">V1</span> SAP Help or Learning read, <span class="chip V2">V2</span> SAP Community or KBA, <span class="chip V3">V3</span> third-party listing or DI HTML only, <span class="chip V4">V4</span> not verified.</p></div>
+</section>
+
+<section id="circelligence">
+<h2>Circelligence and Hilti’s use of it</h2>
+<p>Circelligence is a strategic circularity assessment and scenario tool. BCG’s product page describes it as “part evaluative, part circular economy framework”. Its documented scope is company, portfolio and value chain, not individual tools or parts.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Pillar (BCG product page)</th><th>What it says</th><th>Level</th></tr></thead>
+<tbody>
+<tr><td>Quantitative</td><td>Baseline of circularity performance; pulls data from SAP systems across the value chain; Excel or interface entry also possible</td><td>Company, value chain</td></tr>
+<tr><td>Qualitative</td><td>Survey of cultural and organisational readiness</td><td>Organisation</td></tr>
+<tr><td>Visibility</td><td>Dashboard of circularity scores</td><td>Company, portfolio</td></tr>
+<tr><td>Scenario player</td><td>Models changes to processes and raw materials; supports business cases and prioritising initiatives</td><td>Strategy</td></tr>
+</tbody></table></div>
+<p>The page does not mention case-level repair, disposition, component eligibility, inventory, demand, approvals or writeback. Those are not identified as documented standard capabilities in the sources reviewed.</p>
+<h3>What Hilti publicly confirms <span class="chip E1">E1</span></h3>
+<ul>
+<li>A circularity score, evaluated yearly across the product portfolio and used as a basis for Scope 3 CO2 goals (Hilti and SAP releases, 22 Nov 2023).</li>
+<li>A materials database on SAP BTP with about 250,000 tons of material mapped (TechTarget, 5 Feb 2024).</li>
+<li>Remanufacturing at 70 repair centres, with extensive testing before reuse; an automated, criteria-guided extraction process since 2021, and each reused part tested individually (Hilti 2022 report).</li>
+<li>Additions to the SAP landscape so reused items keep an identity and link to their parent tool (TechTarget, 5 Feb 2024).</li>
+</ul>
+<div class="note amber"><p><strong>Scenario use is not confirmed.</strong> In 2023 BCG said its latest evolutions “lay the groundwork” for integrating scenario assessments. Whether Hilti uses the scenario player is unknown.</p></div>
+
+<h3>The published recovery figures do not reconcile</h3>
+<p>BCG’s page says Circelligence insights led to 120,000 recovered spare parts in 2022 and 90 tons saved. Hilti’s own sources give a different series. These are Hilti-reported operating results, not DI results.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Parts reused</th><th>Tons</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>10,000 to 100,000 a year within two years</td><td>about 50</td><td><a href="https://reports.hilti.group/2021/our-strategy/operational-excellence/doing-more-with-less-circularity-at-hilti">Hilti 2021 report</a></td></tr>
+<tr><td>100,000 a year, from 10,000 within three years</td><td>90</td><td><a href="https://reports.hilti.group/2022/our-stories/circularity-second-life-of-tools">Hilti 2022 report</a></td></tr>
+<tr><td>“Up to 120,000” a year; page also shows 2020 collection data</td><td>about 90</td><td><a href="https://www.hilti.co.il/content/hilti/E4/IL/en/business/business/trends/sustainability/circularity.html">Hilti circularity page</a>, undated</td></tr>
+<tr><td>160,000, from 10,000 in three years; year not stated, page cites 2023 for CO2</td><td>not stated</td><td><a href="https://www.hilti.com/content/hilti/W1/US/en/company/company/about-hilti/sustainability.html">Hilti US page</a></td></tr>
+<tr><td>190,000 in 2024</td><td>about 90</td><td><a href="https://www.hilti.co.nz/content/hilti/A2/NZ/en/business/business/trends/sustainability/circularity.html">Hilti NZ page</a></td></tr>
+</tbody></table></div>
+<p>The 120,000 on BCG’s page is not matched by Hilti’s 2022 report, which gives 100,000. The 90-ton figure sits unchanged beside 100,000, 120,000 and 190,000 parts, so it cannot be a consistent yearly measure. Whether Circelligence caused any of these results is a BCG claim that public sources do not test.</p>
+</section>
+
+<section id="sap">
+<h2>SAP capabilities</h2>
+<p>SAP provides applications, rules, workflow, AI, agents and integration. For every DI-like function it documents a general building block. The sources reviewed do not identify a prebuilt route-ranking, component-eligibility or recovered-part-matching application. Hilti’s licences and deployments are unknown <span class="chip E7">E7</span>.</p>
+<h3>S/4HANA In-House Service (formerly In-House Repair) <span class="chip E3">E3</span></h3>
+<p>Renamed with release 2025. A newer process version (“In-House Service 2.0”) arrived with S/4HANA 2023 FPS02, replacing older repair-specific transaction types. It covers in-house service objects, a precheck decision on follow-up steps, quotations, service orders, confirmations with spare-part consumption, billing and returns logistics. Whether Hilti uses it is unknown.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>DI workflow element</th><th>SAP In-House Service</th><th>Overlap</th></tr></thead>
+<tbody>
+<tr><td>Returned record and evidence</td><td>Returns order and in-house service object</td><td>Data source for DI</td></tr>
+<tr><td>Decide the next step</td><td>Human precheck decision on follow-up steps; no ranking or gates described</td><td><strong>Partial.</strong> Same decision point, different content</td></tr>
+<tr><td>Quotation, repair execution, confirmation</td><td>Service quotation, service order, confirmation</td><td>SAP only</td></tr>
+<tr><td>Spare-part consumption, returns, logistics</td><td>Confirmations, reservations, requisitions, returns, deliveries</td><td>SAP holds the transactions</td></tr>
+<tr><td>Routes beyond repair (harvest, parts allocation, resale, recovery)</td><td>Not described</td><td>DI as designed only</td></tr>
+<tr><td>Predicted versus actual</td><td>Actuals captured; no comparison with a prediction described</td><td>DI as designed only</td></tr>
+</tbody></table></div>
+
+<h3>AI and gateway status as of 5 November 2026</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Item</th><th>Status in SAP material</th><th>Label</th></tr></thead>
+<tbody>
+<tr><td>Joule Studio Agent Builder (original)</td><td>Described as generally available since January 2026; rests on a community post that could not be opened</td><td><span class="chip ga">GA</span></td></tr>
+<tr><td>New Joule Studio</td><td>Early Adopter Care in SAP’s July 2026 highlights; SAP’s CTO reported on 2 Nov as calling it generally available</td><td><span class="chip beta">Limited in July</span></td></tr>
+<tr><td>SAP Business AI Platform</td><td>Reported by SAP’s CTO as generally available (2 Nov 2026)</td><td><span class="chip ga">GA, reported</span></td></tr>
+<tr><td>SAP AI Agent Hub</td><td>In use; verification enforcement at runtime described at TechEd; separate GA date not stated</td><td><span class="chip avl">Available</span></td></tr>
+<tr><td>Agent gateway</td><td>“Generally available today” (TechEd, 28 Oct 2026)</td><td><span class="chip ga">GA</span></td></tr>
+<tr><td>SAP Enterprise AI Gateway</td><td>Announced; built on Integration Suite; no availability date stated</td><td><span class="chip ann">Announced</span></td></tr>
+<tr><td>AI Governance Assistant</td><td>Released in November to Early Adopter Care customers</td><td><span class="chip beta">Limited</span></td></tr>
+</tbody></table></div>
+<p>Impact on DI: generic agent building, MCP, orchestration and governance remain weak differentiators. None of the SAP pages read describes an SAP agent for route choice or recovered-part matching.</p>
+</section>
+
+<section id="connectors">
+<h2>Connectors and APIs</h2>
+<p>The references supplied mix different kinds of integration offering. Only some are SAP-native.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Class</th><th>Examples</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>SAP-native adapters</td><td>Integration Suite adapters for OData V2 and V4, SOAP, IDoc, RFC, SFTP, AMQP, Kafka; Advanced Event Mesh</td><td><span class="chip E3">E3</span></td></tr>
+<tr><td>SAP APIs</td><td>S/4HANA OData APIs such as service order, maintenance notification, material document</td><td><span class="chip E3">E3</span></td></tr>
+<tr><td>SAP Open Connectors</td><td>150 or more connectors to non-SAP applications</td><td><span class="chip E3">E3</span></td></tr>
+<tr><td>Third-party SAP connector</td><td>WSO2 Sales Order connector</td><td><span class="chip E4">E4</span></td></tr>
+<tr><td>External writeback service</td><td>Cognite Data Fusion SAP writeback</td><td><span class="chip E4">E4</span></td></tr>
+<tr><td>Custom code</td><td>OData clients, partner adapters</td><td><span class="chip E5">E5</span></td></tr>
+</tbody></table></div>
+<div class="cols">
+<div class="card"><span class="tag cond">Third-party</span><h3>Cognite SAP writeback</h3><p>Writes from Cognite Data Fusion into S/4HANA over OData V2. The only supported entities are <strong>maintenance notifications</strong> and <strong>attachments</strong>. Service orders, in-house service objects, stock and component recovery are not listed. It needs Cognite as the source, so it is not a route for DI to write to SAP.</p></div>
+<div class="card"><span class="tag cond">Third-party</span><h3>WSO2 Sales Order connector</h3><p>Open-source client for the S/4HANA Sales Order OData API: create, read, update, delete for orders, items, billing plans, schedule lines, partners, pricing and process flow. Relevant to spare-part sales, not to repair, stock or recovery decisions.</p></div>
+</div>
+<h3>SAP aftermarket APIs (selected)</h3>
+<p style="font-size:14px;color:var(--muted)">The SAP Business Accelerator Hub blocks automated access, so API details could not be checked on the hub. An API listed here is not shown to be enabled at Hilti.</p>
+<div class="tablewrap"><table id="apitable">
+<thead><tr><th>Area</th><th>API</th><th>Operations and protocol</th><th>Verification</th></tr></thead>
+<tbody></tbody></table></div>
+</section>
+
+<section id="wedge">
+<h2>Wedge assessment</h2>
+<p><strong>Strong</strong> would mean the DI HTML explicitly supports a valuable capability that is not identified as a standard feature in Circelligence or SAP. <strong>Conditional</strong> means value is possible but needs data, development, integration or validation. <strong>Weak</strong> means SAP or Circelligence already provides substantially equivalent standard functionality. No candidate is Strong.</p>
+<div class="cols">
+<div class="card"><span class="tag cond">Conditional</span><h3>A. Case-level decision intelligence</h3><p>Explicit in the HTML and not identified in Circelligence or SAP. Narrower than first thought: SAP has a precheck decision point, DI has no standalone repair-versus-replace function, and Hilti already runs an automated extraction process.</p></div>
+<div class="card"><span class="tag cond">Conditional · strongest</span><h3>B. Component-to-demand matching</h3><p>Explicit in the HTML. SAP supports the underlying transactions but no matcher was identified. Highest uncertainty: Hilti may already match parts to demand.</p></div>
+<div class="card"><span class="tag cond">Conditional</span><h3>C. Multi-route optimisation</h3><p>Seven routes ranked under constraints. No donation or loaner route in the HTML and no validated optimiser. Folds into A.</p></div>
+<div class="card"><span class="tag weak">Weak</span><h3>D. Governed decision-to-execution</h3><p>Every building block is a current SAP capability. Only the domain-specific loop content is distinctive.</p></div>
+<div class="card"><span class="tag cond">Conditional</span><h3>E. Economic optimisation</h3><p>Case economics differ from Circelligence’s initiative business cases, but the HTML’s economics are a structure, not a validated optimiser. Folds into A and C.</p></div>
+</div>
+<h3>Why component-to-demand matching stays the strongest candidate</h3>
+<dl class="kv">
+<dt>DI modules</dt><dd>Demand opportunity model, find_demand, optimize_pool, Pool optimizer, selective harvest, Returned assets, Policy and certification gate, ERP and WMS sources, Approvals inbox and handoff</dd>
+<dt>SAP already supports</dt><dd>Service-part consumption and serial numbers in In-House Service confirmations, reservations and requisitions, intracompany logistics, stock and goods-movement APIs (graded V1 to V3)</dd>
+<dt>Not identified</dt><dd>A component-to-demand matcher or allocation optimiser in SAP or Circelligence, in the sources reviewed</dd>
+<dt>BCG and SAP could build</dt><dd>A custom matching and allocation service on BTP using SAP APIs, rules and AI Core</dd>
+<dt>Hilti may already do</dt><dd>Automated criteria-based extraction and individual testing (2022); SAP additions for reused-item identity (2024 report); matching to repair demand is unknown <span class="chip E7">E7</span></dd>
+<dt>Data required</dt><dd>Recovered inventory by part, grade and location; repair-order and expected demand; compatibility; new-part price and lead time; transport cost; allocation and quality rules</dd>
+<dt>Outcome that would show value</dt><dd>Share of recovered parts consumed, new-part purchases avoided, recovered-stock ageing and repair wait, compared with historical practice</dd>
+<dt>Status</dt><dd><strong>Conditional, not proven</strong></dd>
+</dl>
+</section>
+
+<section id="precision">
+<h2>What the DI HTML represents</h2>
+<p>These distinctions keep claims about DI honest. DI is a proposed product. Nothing here is a measured result.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Topic</th><th>Represented in the HTML</th><th>Not represented</th></tr></thead>
+<tbody>
+<tr><td>Repair-versus-replace</td><td>Route economics with repair or preparation cost terms; Condition and life gate; Intervention model; a predict_outcomes tool covering repair cost and success</td><td>A standalone repair-versus-replace function, a repair-cost model for Hilti tool families, customer quote logic</td></tr>
+<tr><td>Economics</td><td>Signed cost terms per route with uncertainty and a cost trace</td><td>A validated repair labour and parts estimator; class tables are seeded illustrations</td></tr>
+<tr><td>Eligibility</td><td>Six gates, a ten-item evidence checklist, requests for missing evidence</td><td>Performing inspection, tests or certification, which come from Hilti’s quality and engineering sources</td></tr>
+<tr><td>Matching</td><td>One-off allocation of recovered parts to known or forecast demand lines</td><td>Demand forecasting, technician scheduling, continuous re-matching</td></tr>
+<tr><td>Integrations</td><td>Illustrative connector configurations, including SAP API names</td><td>Any validated connection to a real system</td></tr>
+<tr><td>Results</td><td>Seeded cases and improving model error</td><td>Any measured customer result</td></tr>
+</tbody></table></div>
+<p><strong>What DI could add beyond Hilti’s extraction and testing process (hypothesis).</strong> Nothing here shows Hilti lacks case-level logic. If it exists, DI adds nothing there. If it covers extraction only, DI could add a net-value comparison for the whole item before dismantling, a destination and demand for each extracted part, stated reasons when a route is blocked, and a comparison of outcome with prediction.</p>
+</section>
+
+<section id="positioning">
+<h2>Positioning and moat</h2>
+<div class="verdict">
+<strong class="k">DI is a proposed domain decision layer for returned tools and recovered parts.</strong>
+<p>Using the facts held in SAP and other systems and the rules Hilti owns, it would rank eligible recovery routes and part allocations with stated economics and uncertainty, route the choice for approval into the system that executes it, and compare the outcome with the prediction. Circelligence measures circularity at portfolio level. SAP supplies the applications, rules, workflow and AI on which the transactions run, and on which a comparable layer could also be built.</p>
+</div>
+<p><strong>Why the wording changed.</strong> An earlier version called SAP what “records and executes what happens”. That oversimplified SAP, which also offers a repair application, rules, workflow and agents. The distinction that survives scrutiny rests on documented domain content, not architecture layers. It holds only until Hilti shows equivalent logic in its repair-centre process, a custom BTP build or an SAP application it already runs.</p>
+<h3>Why a customer might buy rather than build</h3>
+<ul>
+<li>A worked domain model (routes, gates, demand, outcome) instead of a blank platform.</li>
+<li>The decision, approval, handoff and reconciliation loop is already connected in one place.</li>
+<li>Evidence snapshots and provenance are part of the design.</li>
+<li>No BTP project capacity committed to a non-core build.</li>
+</ul>
+<p>These are arguments for a buying decision. They do not show DI is better than a Hilti-built solution.</p>
+<div class="note amber"><p><strong>No moat is proven.</strong> A moat could come from reconciled outcome history, Hilti-tuned rules, part-level demand data and embedded workflows. Each accrues only with use, and the outcome history may belong largely to Hilti. The model-error improvement shown in the HTML is seeded.</p></div>
+<h3>What not to claim</h3>
+<ul>
+<li>That DI replaces or competes with Circelligence on scoring, scenarios or material flows.</li>
+<li>That SAP or BCG cannot build this.</li>
+<li>That agents, MCP, workflow, integration or governance differentiate DI against SAP.</li>
+<li>That Hilti lacks case-level decision logic or part matching.</li>
+<li>That DI is integrated with any Hilti or SAP system.</li>
+<li>That any Hilti result is DI’s, or that any DI figure is measured.</li>
+</ul>
+</section>
+
+<section id="qa">
+<h2>Questions Hilti may ask</h2>
+<p>Twenty questions, each with a short answer, a detailed answer, the supporting DI function, the Circelligence or SAP context, and what not to claim.</p>
+<div class="toolbar"><button type="button" id="openall">Expand all</button><button type="button" id="closeall">Collapse all</button></div>
+<div id="qalist"><noscript><p>This section needs JavaScript. The same questions are in the PDF report.</p></noscript></div>
+</section>
+
+<section id="uncertainties">
+<h2>Key uncertainties</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Item</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Hilti’s route-choice method, part matching and extraction criteria</td><td>Unknown beyond a 2022 description. The central uncertainty for every wedge</td></tr>
+<tr><td>Hilti’s SAP edition, modules, licences and enabled APIs</td><td>Unknown</td></tr>
+<tr><td>Circelligence functions deployed at Hilti, including private customisation</td><td>Scoring and database confirmed; scenario use not confirmed</td></tr>
+<tr><td>Recovered-parts statistics</td><td>BCG 120,000 versus Hilti 100,000 for 2022; the 90-ton figure is not a consistent yearly measure</td></tr>
+<tr><td>SAP API details</td><td>Business Accelerator Hub and all SAP Help pages blocked automated access; graded V1 to V3</td></tr>
+<tr><td>In-House Service API coverage and Public Edition naming</td><td>Not verified; an “OData API: In-House Service” entry was seen only as a title</td></tr>
+<tr><td>SAP Enterprise AI Gateway</td><td>Announced; do not describe as generally available</td></tr>
+<tr><td>DI performance and integrations</td><td>None demonstrated; the HTML uses seeded data and illustrative configuration</td></tr>
+<tr><td>Cognite writeback beyond notifications and attachments</td><td>Not stated; would need Cognite confirmation</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="sources">
+<h2>Sources</h2>
+<p>Read in full on or before 5 November 2026 unless noted.</p>
+<ul>
+<li><a href="https://www.bcg.com/x/product-library/circular-economy-circelligence">BCG: Circelligence product page</a></li>
+<li><a href="https://news.sap.com/2023/11/hilti-group-measures-circularity-sap-btp/">SAP News Center: Hilti Group measures circularity with SAP BTP</a>, 22 Nov 2023</li>
+<li><a href="https://www.hilti.group/content/hilti/CP/XX/en/company/media-relations/media-releases/bcg_sap_circularity_standards_circelligence.html">Hilti Group media release</a>, 22 Nov 2023</li>
+<li><a href="https://www.techtarget.com/sustainability/feature/Hilti-Group-uses-tools-tech-to-tackle-circular-manufacturing">TechTarget: Hilti Group uses tools, tech to tackle circular manufacturing</a>, 5 Feb 2024</li>
+<li>Hilti reports: <a href="https://reports.hilti.group/2021/our-strategy/operational-excellence/doing-more-with-less-circularity-at-hilti">2021</a>, <a href="https://reports.hilti.group/2022/our-stories/circularity-second-life-of-tools">2022</a></li>
+<li>Hilti pages: <a href="https://www.hilti.co.nz/content/hilti/A2/NZ/en/business/business/trends/sustainability/circularity.html">New Zealand circularity</a>, <a href="https://www.hilti.co.il/content/hilti/E4/IL/en/business/business/trends/sustainability/circularity.html">Israel circularity</a>, <a href="https://www.hilti.com/content/hilti/W1/US/en/company/company/about-hilti/sustainability.html">US sustainability</a></li>
+<li><a href="https://docs.cognite.com/cdf/integration/guides/interfaces/sap_writeback.md">Cognite: SAP writeback</a> and <a href="https://docs.cognite.com/cdf/integration/guides/interfaces/sap_writeback_setup.md">setup</a></li>
+<li><a href="https://wso2.com/integration-platform/docs/connectors/catalog/erp-business/sap.s4hana.api_sales_order_srv/sap-sales-order-connector-overview">WSO2: SAP Sales Order connector</a></li>
+<li>SAP Learning: <a href="https://learning.sap.com/courses/identifying-business-processes-in-sap-s4hana-service/planning-and-performing-in-house-repairs_c8d5633d-2473-4c9f-8755-e953255c173f">Planning and performing in-house services</a>, <a href="https://learning.sap.com/courses/performing-basic-customizing-for-service-in-sap-s-4hana-and-sap-s-4hana-cloud-private-edition/learning-the-configuration-of-in-house-service_f7baa900-0537-49f9-8bda-10ab7492b51c">configuration of in-house service</a>, <a href="https://learning.sap.com/courses/sap-s-4hana-cloud-private-edition-service-delta/identifying-new-features-of-the-apis-for-service-orders">APIs for service orders</a></li>
+<li>SAP News Center: <a href="https://news.sap.com/2026/07/sap-business-ai-release-highlights-q2-2026/">Business AI highlights Q2 2026</a>, <a href="https://news.sap.com/2026/10/sap-teched-developers-you-can-build-autonomous-enterprise/">TechEd 2026</a>, <a href="https://news.sap.com/africa/2026/11/sap-beefs-up-business-ai-platform-and-joule-to-drive-agentic-ai-adoption/">Business AI Platform and Joule (2 Nov 2026)</a></li>
+</ul>
+<p style="font-size:14px;color:var(--muted)">Not opened in full (blocked or excerpt only): SAP Business Accelerator Hub, SAP Help pages, SAP Community posts, SAP KBA, the Hilti 2023 Sustainability Report, SAP Integration Suite decks, and third-party API listings. The full report lists them with verification status.</p>
+</section>
+
+<footer>
+<p>DI is a proposed product described in a provided HTML file. No deployment, validated Hilti integration or measured result is claimed. Hilti-reported figures are Hilti’s. This site is a research summary, not a proposal or commercial document. Research cut-off 5 November 2026.</p>
+</footer>
+</main>
+</div>
+<script>
+const QA=[
+["We already use Circelligence. Why do we need DI?","Circelligence tells you how circular Hilti is. DI would decide what happens to a specific returned tool or part and check the result. They answer different questions, so DI is a candidate complement, not a substitute.","Circelligence documents scores, a material database, a dashboard and a scenario player at company and value-chain level. DI’s HTML works per case: eligible routes, economics, matching, approval, handoff and reconciliation. Whether Hilti needs that depends on how it makes those choices today.","Returned assets; Route candidates; Six eligibility gates; Predicted vs actual","Circelligence pillars; Hilti score and database confirmed (SAP, 2023)","That DI measures circularity better or replaces Circelligence"],
+["Isn’t Circelligence already tracking circularity across our product value chain?","Yes, at portfolio and material level. DI does not repeat that; it works on individual items once they are returned.","Hilti evaluates its portfolio yearly and uses the result for Scope 3 goals. Circelligence’s documented data runs from raw materials to end of life and does not describe case-level decisions. DI’s outputs could be measured against those scores but do not substitute for them.","Returned assets; Route mix; Sustainability view","Quantitative pillar; confirmed yearly portfolio assessment","That DI also tracks value-chain circularity"],
+["Circelligence already provides scenario analysis and business cases. What is different in DI?","Circelligence’s scenarios test improvement initiatives. DI values routes for one item with uncertainty and later compares the actual result.","The scenario player models changes to processes and raw materials and supports business cases for initiatives. DI carries signed cost terms per route, P10 to P90 ranges, a what-if on a case, and Predicted vs actual. One sets priorities and the other applies them item by item. DI’s economics are not validated.","Route candidates; cost trace; Predicted vs actual","Scenario player; initiative business cases","That Circelligence cannot calculate economics"],
+["We already recover and reuse spare parts. What problem is DI solving?","Not recovery itself. Possibly which parts to recover and where each goes, if that is not already optimised, which public sources cannot tell us.","Hilti reused 190,000 parts in 2024 and runs an automated process that defines when each part is extracted using prescribed criteria (2022). DI would add net-value ranking, matching to repair demand and reconciliation. If that already exists in your process, the increment is small.","Internal recovered-part use route; Demand opportunity model; Pool optimizer","Hilti’s repair-centre process; Circelligence tracks parts reuse as a metric","That reuse or criteria-based extraction is missing"],
+["We already have SAP BTP. Why introduce another platform?","You may not need one. The question is whether to build and maintain a domain decision loop on BTP or adopt a product that carries it. DI does not replace BTP.","SAP documents workflow, rules, agents, integration and APIs. None is described as providing route, eligibility, matching or reconciliation content. Building that content is the cost. DI would sit beside BTP and use SAP interfaces.","Connection Fabric; Process orchestration","Build Process Automation, Joule Studio, Integration Suite","That BTP cannot do this"],
+["Why can’t we build the DI features directly in SAP?","You can. The case for DI is time and ownership of domain content, not capability.","Every building block is documented: rules, workflows, AI Core, agents with human oversight, adapters, APIs. DI offers a defined domain model and loop. Hilti decides on effort, maintenance and control. DI’s advantage is unproven.","Whole proposed loop","As in the previous answer","That SAP development is hard or slow"],
+["SAP Integration Suite already connects our applications. Why do we need DI?","It moves data between systems; it does not decide. DI could use it as the transport.","The adapters cover OData, SOAP, IDoc, RFC, SFTP, AMQP, Kafka and Open Connectors. DI’s Connection Fabric overlaps in connecting systems; its added layer is canonical models, a conflict queue, evidence, gates and ranking.","Connection Fabric; Conflict queue; canonical models","Cloud Integration adapters; Event Mesh","That DI’s connectors beat SAP’s"],
+["SAP supports AI agents, workflows and API orchestration. What is DI’s advantage?","On the generic side, little. The advantage would be prebuilt aftermarket decision content, not agents or orchestration.","Joule Studio supports MCP and human-in-the-loop; AI Agent Hub governs agents and MCP servers with runtime verification; an agent gateway is generally available and an Enterprise AI Gateway has been announced. DI’s registry, permissions and write gate are comparable in intent. DI’s tools such as find_demand and optimize_pool are the domain content.","Agent registry; Permission matrix; tool catalogue","Joule Studio; AI Agent Hub; AI Core","That agent governance differentiates DI"],
+["Can Circelligence and SAP already provide the same decision functionality?","Not as documented standard features in the sources reviewed. SAP could be used to build them.","Circelligence is not documented at case level. SAP offers In-House Service with a precheck decision on follow-up steps for in-house service objects, but no route-ranking or matching feature was identified. Hilti’s private custom work cannot be seen.","Route candidates; Pool optimizer; Predicted vs actual","In-House Service; Circelligence scope","That Hilti lacks such logic"],
+["Is DI simply duplicating Circelligence at an operational level?","No. Circelligence measures and DI decides. The only overlap is sustainability reporting, and the metrics differ.","DI’s Sustainability view reports estimated versus measured CO2e avoided by route. Circelligence scores circularity from material flows. Definitions would need alignment.","Sustainability view","Circelligence scoring","Treating CO2e as a circularity score"],
+["How is DI different from a custom BTP application?","Functionally it could be the same thing. The difference is that it exists as a defined product rather than a project.","A custom app needs the same modules. The trade-off is fit to Hilti and control against product maturity and carrying cost. Neither route is proven: DI has no validated results and a custom build would be new too.","Whole proposed loop","BTP application services","That DI is better than a custom build"],
+["Which exact SAP APIs would DI consume and which would it update?","The HTML illustrates reads from material stock, purchase order and product APIs and writes to reservation and material document APIs. Hilti’s actual set depends on its edition and processes and has not been verified.","The DI HTML ERP source shows API_MATERIAL_STOCK_SRV, API_PURCHASEORDER_PROCESS_SRV and API_PRODUCT_SRV for reads, and API_RESERVATION_DOCUMENT_SRV and API_MATERIAL_DOCUMENT_SRV for writes. For repair, the service order API (API_SERVICE_ORDER_SRV, or OP_SERVICEORDER_0001 in Private Edition 2025 and later) and the maintenance notification API are relevant. The Business Accelerator Hub could not be read, so see the verification levels above.","Connection Fabric ERP and EAM sources","S/4HANA APIs","That these APIs are enabled at Hilti"],
+["Does DI require us to replace any existing SAP or BCG system?","No.","SAP stays the system of record and Circelligence stays the measurement tool. DI reads evidence and sends approved instructions. It needs read access and agreed write interfaces.","Connection Fabric; handoff model","Existing Hilti systems","That DI works without access to Hilti systems"],
+["What information can DI provide that our existing systems do not?","A ranked, gated and explained recommendation for each case and its reconciled outcome, if those are not already produced elsewhere.","Evidence per case with source and freshness, excluded routes with the failing gate, cost lines, an evidence snapshot with model and policy version, and predicted versus actual. Existing systems hold the facts; DI’s output is the decision record.","Route candidates; Fetch log; Predicted vs actual","Facts in SAP; scores in Circelligence","“Single source of truth”"],
+["How does DI make a better repair-versus-replace decision?","DI has no standalone repair-versus-replace function. It compares repair-and-reuse routes against retirement for Fleet and end-of-contract items.","Repair or preparation cost, service exposure, remaining life from engineering sources, and alternatives are compared after gates. Hilti’s Repair Cost Limit remains a commercial policy. SAP In-House Service covers prechecks, service quotations and service orders.","Route candidates; Condition and life gate","In-House Service; Hilti policy","That DI is a repair-versus-replace engine"],
+["How does DI determine whether a recovered component can safely be reused?","It does not judge physical safety. It enforces Hilti’s rules: missing evidence or a failing gate means no recommendation.","Gates cover condition and life, post-intervention condition, and policy and certification, reading QMS, PLM and engineering sources. Evidence gaps are listed. Hilti tests each reused part individually (2022); those tests remain Hilti’s.","Six eligibility gates; Evidence gaps","SAP inspection lot services; Hilti testing","That DI certifies parts"],
+["How does it match available recovered components to repair demand?","It treats repair demand as demand lines, checks compatibility and eligibility, and allocates scarce parts so none is committed twice. It needs repair-demand and stock data.","The Demand opportunity model carries specification, quantity, location, need-by and confirmed or forecast status. The Pool optimizer compares exact and greedy allocation. SAP supports reservations for service parts but no matcher was identified. The HTML models one-off allocation, not continuous scheduling or forecasting.","Demand opportunity model; find_demand; Pool optimizer","Reservations, requisitions and service-part consumption in In-House Service","Forecasting or scheduling claims"],
+["How does DI prevent an AI agent from executing an unauthorised action?","Write tools that commit stock, spend or price stop at human approval, and agents cannot waive a failed gate.","The Handoff Coordinator sends only what a person approved, capped at the approved spend; send_instruction needs an approval reference; every call is logged. SAP offers comparable controls (human-in-the-loop, AI Agent Hub), so the claim is that DI’s are predefined for these actions.","Agent registry; write gate; Call log","Joule Studio human oversight; AI Agent Hub","That DI’s controls are safer than SAP’s"],
+["How does DI demonstrate that its decisions improve actual service outcomes?","By comparing predictions to actuals line by line and tracking model versions and overrides, once Hilti data flows. The figures in the HTML are seeded.","Predicted vs actual, Model versions and Overrides are the mechanism. Uplift is measured against a modelled baseline, so Hilti’s real baseline is required. A comparison with historical dispositions is the evidence that would matter.","Predicted vs actual; Model versions; Overrides","None identified as a prebuilt function","Quoting HTML improvement as a result"],
+["What is the genuine product moat if SAP can build similar functionality?","None is proven. A possible one is reconciled outcome history combined with Hilti-tuned rules, and it exists only after use.","Features are replicable. Data accumulates only with operation, and the outcome history created at Hilti may belong largely to Hilti.","Model versions; Audit and provenance","Platform building blocks","That a moat exists"]
+];
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const list=document.getElementById('qalist');
+list.innerHTML=QA.map((q,i)=>`<details><summary><span><span class="qn">${i+1}.</span>${esc(q[0])}<span class="quick">${esc(q[1])}</span></span></summary><div class="body"><dl>
+<dt>Detailed answer</dt><dd>${esc(q[2])}</dd>
+<dt>Supporting DI functionality (HTML)</dt><dd>${esc(q[3])}</dd>
+<dt>Circelligence or SAP functionality</dt><dd>${esc(q[4])}</dd>
+<dt>Claims to avoid</dt><dd>${esc(q[5])}</dd></dl></div></details>`).join('');
+document.getElementById('openall').onclick=()=>list.querySelectorAll('details').forEach(d=>d.open=true);
+document.getElementById('closeall').onclick=()=>list.querySelectorAll('details').forEach(d=>d.open=false);
+
+const API=[
+["Service orders","API_SERVICE_ORDER_SRV","Create, read, update, delete; OData V2; deprecated from release 2025 in Private Edition","V1"],
+["Service orders","OP_SERVICEORDER_0001","OData V4 successor with ReleaseForBilling action; Private Edition 2025 and later","V1"],
+["Service orders","Service order SOAP API","Warranty information, In Process status, change indicators since release 2025","V1"],
+["In-house service","In-House Service application (formerly In-House Repair)","Application functions; API coverage of in-house service objects not verified","V4"],
+["Maintenance notifications","API_MAINTNOTIFICATION","POST and GET confirmed by an SAP KBA; OData V2","V2"],
+["Equipment","Equipment, Functional Location APIs","Create, update, read; Cloud from release 2008","V2"],
+["Material stock","API_MATERIAL_STOCK_SRV","Read; OData V2; used in the DI HTML","V3"],
+["Goods movements","API_MATERIAL_DOCUMENT_SRV","Read and post goods movements; OData V2","V2"],
+["Reservations","API_RESERVATION_DOCUMENT_SRV","Create; appears in the DI HTML only","V3"],
+["Quality","Inspection Lot service","Per SDK package; quality notification API not identified","V2"],
+["Procurement","API_PURCHASEORDER_PROCESS_SRV","Create, read, update; OData V2","V3"],
+["Spare-part sales","API_SALES_ORDER_SRV","CRUD; OData V2 (A2X); WSO2 connector exists","V3"],
+["Serial and batch numbers","No API identified","Serial numbers are consumed in service confirmations as an application feature","V2"],
+["Service requests","No API identified","Not found in the sources reviewed","V4"]
+];
+document.querySelector('#apitable tbody').innerHTML=API.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td><span class="chip ${r[3]}">${r[3]}</span></td></tr>`).join('');
+
+// section highlight in rail
+const links=[...document.querySelectorAll('nav.rail a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+document.getElementById('jump').addEventListener('change',e=>{if(e.target.value){location.hash=e.target.value;e.target.value=''}});
+</script>
+</body>
+</html>
